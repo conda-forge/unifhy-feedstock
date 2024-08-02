@@ -1,5 +1,5 @@
 {% set name = "unifhy" %}
-{% set version = "0.1.1" %}
+{% set version = "1.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/unifhy-org/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: a559044b85a5e8c66e2d93ad8885b32df318ebb659617184b83733999e24ee50
+  sha256: 7500053ed50fad1775d88f4c9065a9de859ad0a5f071bf480d605eaa5cb142a0
 
 build:
   number: 0
