@@ -11,14 +11,14 @@ source:
   sha256: 7500053ed50fad1775d88f4c9065a9de859ad0a5f071bf480d605eaa5cb142a0
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - cf-python >=3.11.0
     - cftime
@@ -27,7 +27,7 @@ requirements:
     - netcdf4 >=1.5
     - numpy >=1.16
     - pyproj >=3.0
-    - python >=3.7
+    - python >={{ python_min }}
     - pyyaml >=5.3
 
 test:
@@ -37,6 +37,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/unifhy/
